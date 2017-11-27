@@ -15,8 +15,11 @@ export MYSQL_USER=
 export MYSQL_PASSWORD=
 export MYSQL_DATABASE=
 export MYSQL_HOST=
+export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
 
 cd /var/www
+git clone https://github.com/certbot/certbot
 git clone https://github.com/khirayama/instantboard-web.git
 git clone https://github.com/khirayama/instantboard-client.git
 git clone https://github.com/khirayama/instantboard-api.git
