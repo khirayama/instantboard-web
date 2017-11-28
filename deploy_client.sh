@@ -1,5 +1,7 @@
 source /var/www/instantboard-client/.envrc
+
 cd /var/www/instantboard-client
+git reset --hard @
 rm -rf ./node_modules
 nvm install
 npm install
