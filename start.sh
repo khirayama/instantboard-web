@@ -18,7 +18,7 @@ cp /var/www/instantboard-web/.envrc.example /var/www/instantboard-web/.envrc
 cp /var/www/instantboard-client/.envrc.example /var/www/instantboard-client/.envrc
 cp /var/www/instantboard-api/.envrc.example /var/www/instantboard-api/.envrc
 
-echo -e "export NODE_ENV=production\nexport LC_ALL=en_US.UTF-8\nexport LC_CTYPE=en_US.UTF-8" > /var/www/.env
+echo -e "export NODE_ENV=production\nexport LC_ALL=en_US.UTF-8\nexport LC_CTYPE=en_US.UTF-8" > /var/www/.envrc
 vim /var/www/instantboard-web/.envrc
 vim /var/www/instantboard-client/.envrc
 vim /var/www/instantboard-api/.envrc

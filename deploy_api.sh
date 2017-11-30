@@ -1,3 +1,6 @@
+source /var/www/.envrc
+source /var/www/instantboard-web/.envrc
+source /var/www/instantboard-client/.envrc
 source /var/www/instantboard-api/.envrc
 
 cd /var/www/instantboard-api
