@@ -6,6 +6,7 @@ cd /var/www/certbot
 
 cd /var/www/instantboard-web
 git reset --hard @
+git pull origin master
 cp ./nginx.conf /etc/nginx/nginx.conf
 nginx -s stop
 nginx

@@ -2,6 +2,7 @@ source /var/www/instantboard-api/.envrc
 
 cd /var/www/instantboard-api
 git reset --hard @
+git pull origin master
 rm -rf ./node_modules
 nvm install
 npm install
