@@ -11,6 +11,10 @@ cd /var/www/certbot
 cd /var/www/instantboard-web
 git reset --hard @
 git pull origin master
+rm -rf ./node_modules
+nvm install
+npm install
+npm run build
 cp ./nginx.conf /etc/nginx/nginx.conf
 nginx -s stop
 nginx

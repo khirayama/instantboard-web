@@ -51,5 +51,8 @@ cd /var/www/certbot
 ./certbot-auto certonly --webroot -d api.instantboard.cloud -m $EMAIL --agree-tos -n --webroot-path /var/www/instantboard-api/src/public
 
 cd /var/www/instantboard-web
+nvm install
+npm install
+npm run build
 cp ./nginx.conf /etc/nginx/nginx.conf
 nginx
