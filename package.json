@@ -24,7 +24,7 @@
     "npm-check-updates": "2.13.0",
     "postcss-cli": "4.1.1",
     "postcss-easy-import": "3.0.0",
-    "postcss-nested": "2.1.2",
+    "postcss-nested": "3.0.0",
     "postcss-simple-vars": "4.1.0"
   }
 }
