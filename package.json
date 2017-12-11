@@ -14,12 +14,14 @@
     "copy:files": "cpx 'src/**/*.{html,json,woff2,png}' dist",
     "copy:files:watch": "cpx -w 'src/**/*.{html,json,woff2,png}' dist",
     "build": "npm run clean && npm run build:styles && npm run copy:files",
-    "dev": "npm run clean && concurrently 'npm run build:styles:watch' 'npm run copy:files:watch'"
+    "dev": "npm run clean && concurrently 'npm run build:styles:watch' 'npm run copy:files:watch'",
+    "check": "npm-check-updates"
   },
   "dependencies": {
     "concurrently": "3.5.1",
     "cpx": "1.5.0",
     "cssnano": "3.10.0",
+    "npm-check-updates": "2.13.0",
     "postcss-cli": "4.1.1",
     "postcss-easy-import": "3.0.0",
     "postcss-nested": "2.1.2",
