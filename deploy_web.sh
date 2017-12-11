@@ -2,7 +2,7 @@
 . ~/.bashrc
 . /var/www/.envrc
 . /var/www/instantboard-web/.envrc
-. /var/www/instantboard-client/.envrc
+. /var/www/instantboard-app/.envrc
 . /var/www/instantboard-api/.envrc
 
 cd /var/www/certbot
