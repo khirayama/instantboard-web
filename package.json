@@ -17,12 +17,12 @@
     "dev": "npm run clean && concurrently 'npm run build:styles:watch' 'npm run copy:files:watch'"
   },
   "dependencies": {
-    "concurrently": "^3.5.1",
-    "cpx": "^1.5.0",
-    "cssnano": "^3.10.0",
-    "postcss-cli": "^4.1.1",
-    "postcss-easy-import": "^3.0.0",
-    "postcss-nested": "^2.1.2",
-    "postcss-simple-vars": "^4.1.0"
+    "concurrently": "3.5.1",
+    "cpx": "1.5.0",
+    "cssnano": "3.10.0",
+    "postcss-cli": "4.1.1",
+    "postcss-easy-import": "3.0.0",
+    "postcss-nested": "2.1.2",
+    "postcss-simple-vars": "4.1.0"
   }
 }
