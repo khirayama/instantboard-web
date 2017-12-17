@@ -14,7 +14,8 @@
     "copy:files": "cpx 'src/**/*.{html,json,woff2,png}' dist",
     "copy:files:watch": "cpx -w 'src/**/*.{html,json,woff2,png}' dist",
     "build": "npm run clean && npm run build:styles && npm run copy:files",
-    "dev": "npm run clean && concurrently 'npm run build:styles:watch' 'npm run copy:files:watch'",
+    "server": "browser-sync start --serveStatic dist --files dist/**/* --no-notify --no-open --no-ui --no-ghost-mode",
+    "dev": "npm run clean && concurrently 'npm run build:styles:watch' 'npm run copy:files:watch' 'npm run server'",
     "check": "npm-check-updates"
   },
   "dependencies": {
