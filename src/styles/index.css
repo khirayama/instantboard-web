@@ -3,7 +3,8 @@
 
 @import "./application";
 
-$height-header: 55px;
+/* $height-header: auto; */
+$height-header: 57px;
 
 .web-page {
   width: 100%;
@@ -14,17 +15,18 @@ $height-header: 55px;
 
 .web-header {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
   height: $height-header;
   background-color: $color-background-content;
-  border-bottom: $border;
+  box-shadow: $shadow;
 
   .web-header--inner {
     width: 100%;
     max-width: $breakpoint-wide;
-    padding: 16px 24px;
+    padding: 8px 16px;
     margin: 0 auto;
     text-align: right;
   }
@@ -34,22 +36,103 @@ $height-header: 55px;
   width: 100%;
   padding-top: $height-header;
 
-  .web-content--inner {
-    width: 100%;
-    max-width: $breakpoint-wide;
-    margin: 0 auto;
+  .web-content--main-section {
+    .web-content--main-section--inner {
+      width: 100%;
+      max-width: $breakpoint-wide;
+      margin: 0 auto;
+      padding: 64px 16px 124px;
+
+      h1 {
+        letter-spacing: -0.2px;
+      }
+
+      p {
+        margin: 28px 0;
+      }
+    }
   }
 
-  .web-content--main-section {
-    padding: 48px 24px;
+  .web-content--image-section {
+    background-color: $color-background-content;
 
-    p {
-      margin: 28px 0 36px;
+    .web-content--image-section--inner {
+      position: relative;
+      width: 100%;
+      max-width: $breakpoint-wide;
+      margin: 0 auto;
+      padding: 48px 16px;
+
+      .web-content--image-section--images {
+        padding-top: 45%;
+
+        .web-content--main-section--desktop-image {
+          position: absolute;
+          top: -36px;
+          left: 16px;
+          width: 80%;
+          min-width: 280px;
+          box-shadow: 0 0 4px 1px $color-shadow;
+        }
+
+        .web-content--main-section--mobile-image {
+          position: absolute;
+          bottom: -12px;
+          right: 16px;
+          width: 28%;
+          min-width: 100px;
+          box-shadow: 0 0 4px 1px $color-shadow;
+        }
+      }
+    }
+  }
+
+  .web-content--appeal-section {
+    .web-content--appeal-section--inner {
+      width: 100%;
+      max-width: $breakpoint-wide;
+      margin: 0 auto;
+      padding: 64px 16px 124px;
+
+      p {
+        text-align: center;
+        margin: 16px;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+
+        li {
+          flex: 1;
+          padding: 16px;
+          min-width: 240px;
+          max-width: 360px;
+          height: 240px;
+
+          h3 {
+            text-align: center;
+            font-weight: $font-medium;
+            height: 3rem;
+          }
+
+          p {
+            text-align: left;
+          }
+        }
+      }
     }
   }
 }
 
 .web-login-button {
+  display: inline-block;
   font-weight: $font-medium;
   padding: 8px 12px;
   border: $border;
