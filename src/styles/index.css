@@ -2,3 +2,55 @@
 @import "./reset";
 
 @import "./application";
+
+$height-header: 55px;
+
+.web-page {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: $color-background;
+}
+
+.web-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $height-header;
+  background-color: $color-background-content;
+  border-bottom: $border;
+
+  .web-header--inner {
+    width: 100%;
+    max-width: $breakpoint-wide;
+    padding: 16px 24px;
+    margin: 0 auto;
+    text-align: right;
+  }
+}
+
+.web-content {
+  width: 100%;
+  padding-top: $height-header;
+
+  .web-content--inner {
+    width: 100%;
+    max-width: $breakpoint-wide;
+    margin: 0 auto;
+  }
+
+  .web-content--main-section {
+    padding: 48px 24px;
+
+    p {
+      margin: 28px 0 36px;
+    }
+  }
+}
+
+.web-login-button {
+  font-weight: $font-medium;
+  padding: 8px 12px;
+  border: $border;
+}
