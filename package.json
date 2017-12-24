@@ -9,13 +9,14 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
+    "build:images": "node minimize-images.js",
     "build:styles": "postcss -c .postcssrc.js src/styles/index.css -o dist/styles/index.css",
     "build:styles:watch": "postcss -c .postcssrc.js -w src/styles/index.css -o dist/styles/index.css",
-    "copy:files": "cpx 'src/**/*.{html,json,woff2,png}' dist",
-    "copy:files:watch": "cpx -w 'src/**/*.{html,json,woff2,png}' dist",
-    "build": "npm run clean && npm run build:styles && npm run copy:files",
+    "copy:files": "cpx 'src/**/*.{html,json,woff2}' dist",
+    "copy:files:watch": "cpx -w 'src/**/*.{html,json,woff2}' dist",
+    "build": "npm run clean && npm run build:images &&  npm run build:styles && npm run copy:files",
     "server": "browser-sync start --serveStatic dist --files dist/**/* --no-notify --no-open --no-ui --no-ghost-mode",
-    "dev": "npm run clean && concurrently 'npm run build:styles:watch' 'npm run copy:files:watch' 'npm run server'",
+    "dev": "npm run clean && concurrently 'npm run build:images' 'npm run build:styles:watch' 'npm run copy:files:watch' 'npm run server'",
     "check": "npm-check-updates"
   },
   "dependencies": {
