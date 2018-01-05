@@ -1,6 +1,6 @@
 # Install packages
 apt update
-apt install curl git mysql-server mysql-client nginx vim -y
+apt install curl git make g++ mysql-server mysql-client nginx vim -y
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
 
 # Download resources
