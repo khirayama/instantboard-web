@@ -23,10 +23,14 @@ vim /var/www/instantboard-web/.envrc
 vim /var/www/instantboard-app/.envrc
 vim /var/www/instantboard-api/.envrc
 
+# Set env vars
 source /var/www/.envrc
 source /var/www/instantboard-web/.envrc
 source /var/www/instantboard-app/.envrc
 source /var/www/instantboard-api/.envrc
+
+# Install mackerel
+curl -o- https://mackerel.io/file/script/setup-all-apt-v2.sh | sh
 
 # For app
 cd /var/www/instantboard-app
