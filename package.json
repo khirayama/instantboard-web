@@ -17,13 +17,22 @@
     "build": "npm run clean && npm run build:images &&  npm run build:styles && npm run copy:files",
     "server": "browser-sync start --serveStatic dist --files dist/**/* --no-notify --no-open --no-ui --no-ghost-mode",
     "dev": "npm run clean && concurrently 'npm run build:images' 'npm run build:styles:watch' 'npm run copy:files:watch' 'npm run server'",
+    "lint": "eslint --fix --ignore-path .gitignore src test",
+    "format": "prettier --ignore-path .gitignore --config .prettierrc --write 'src/**/!(*.html|*.png)'",
     "check": "npm-check-updates"
   },
+  "pre-commit": [
+    "lint",
+    "format"
+  ],
   "dependencies": {
     "browser-sync": "2.21.0",
     "concurrently": "3.5.1",
     "cpx": "1.5.0",
     "cssnano": "3.10.0",
+    "eslint": "4.15.0",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-config-xo-space": "0.17.0",
     "imagemin": "^5.3.1",
     "imagemin-jpegtran": "5.0.2",
     "imagemin-pngquant": "5.0.1",
@@ -32,6 +41,8 @@
     "postcss-cli": "4.1.1",
     "postcss-easy-import": "3.0.0",
     "postcss-nested": "3.0.0",
-    "postcss-simple-vars": "4.1.0"
+    "postcss-simple-vars": "4.1.0",
+    "pre-commit": "1.2.2",
+    "prettier": "1.9.2"
   }
 }
