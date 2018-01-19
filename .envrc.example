@@ -1,1 +1,2 @@
 export EMAIL=
+export MACKEREL_APIKEY=

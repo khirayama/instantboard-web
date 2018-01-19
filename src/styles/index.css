@@ -1,7 +1,7 @@
-@import "./constants/**/*";
-@import "./reset";
+@import './constants/**/*';
+@import './reset';
 
-@import "./application";
+@import './application';
 
 /* $height-header: auto; */
 $height-header: 57px;
