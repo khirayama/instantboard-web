@@ -7,7 +7,7 @@ imagemin(['materials/**/*.+(jpg|jpeg|png)'], 'src/images', {
   plugins: [
     imageminJpegtran(),
     imageminPngquant({
-      quality: '65-80',
+      quality: '60-70',
     }),
   ]
 });
@@ -15,7 +15,7 @@ imagemin(['materials/**/*.+(jpg|jpeg|png)'], 'src/images', {
 imagemin(['materials/**/*.+(jpg|jpeg|png)'], 'src/images', {
   plugins: [
     imageminWebp({
-      quality: '65-80',
+      quality: '60-70',
     }),
   ],
 });
