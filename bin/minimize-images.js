@@ -3,7 +3,7 @@ const imageminJpegtran = require('imagemin-jpegtran');
 const imageminPngquant = require('imagemin-pngquant');
 const imageminWebp = require('imagemin-webp');
 
-imagemin(['src/**/*.+(jpg|jpeg|png)'], 'dist/images', {
+imagemin(['materials/**/*.+(jpg|jpeg|png)'], 'src/images', {
   plugins: [
     imageminJpegtran(),
     imageminPngquant({
@@ -12,7 +12,7 @@ imagemin(['src/**/*.+(jpg|jpeg|png)'], 'dist/images', {
   ]
 });
 
-imagemin(['src/**/*.+(jpg|jpeg|png)'], 'dist/images', {
+imagemin(['materials/**/*.+(jpg|jpeg|png)'], 'src/images', {
   plugins: [
     imageminWebp({
       quality: '65-80',
