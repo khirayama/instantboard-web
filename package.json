@@ -9,7 +9,7 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build:images": "node minimize-images.js",
+    "build:images": "node bin/minimize-images.js",
     "build:styles": "postcss -c .postcssrc.js src/styles/index.css -o dist/styles/index.css",
     "build:styles:watch": "postcss -c .postcssrc.js -w src/styles/index.css -o dist/styles/index.css",
     "copy:files": "cpx 'src/**/*.{html,json,woff2}' dist",
