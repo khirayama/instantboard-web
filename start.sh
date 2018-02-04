@@ -50,7 +50,8 @@ npm start &
 
 # For web
 cd /var/www/certbot
-./certbot-auto certonly --webroot -d www.instantboard.cloud -m $EMAIL --agree-tos -n --webroot-path /var/www/instantboard-web/
+./certbot-auto certonly --webroot -d instantboard.cloud -m $EMAIL --agree-tos -n --webroot-path /var/www/instantboard-web/dist
+./certbot-auto certonly --webroot -d www.instantboard.cloud -m $EMAIL --agree-tos -n --webroot-path /var/www/instantboard-web/dist
 ./certbot-auto certonly --webroot -d app.instantboard.cloud -m $EMAIL --agree-tos -n --webroot-path /var/www/instantboard-app/dist/public
 ./certbot-auto certonly --webroot -d api.instantboard.cloud -m $EMAIL --agree-tos -n --webroot-path /var/www/instantboard-api/src/public
 
