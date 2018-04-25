@@ -1,4 +1,6 @@
 #!/bin/bash
+. ~/.nvm/nvm.sh
+. ~/.profile
 . ~/.bashrc
 . /var/www/.envrc
 . /var/www/instantboard-web/.envrc
@@ -14,6 +16,8 @@ git pull origin master
 rm -rf ./node_modules
 nvm install
 npm install
+
+export NODE_ENV=production
 npm run build
 cp ./nginx.conf /etc/nginx/nginx.conf
 nginx -s stop
