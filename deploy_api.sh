@@ -1,4 +1,6 @@
 #!/bin/bash
+. ~/.nvm/nvm.sh
+. ~/.profile
 . ~/.bashrc
 . /var/www/.envrc
 . /var/www/instantboard-web/.envrc
@@ -10,6 +12,7 @@ git reset --hard @
 git pull origin master
 rm -rf ./node_modules
 nvm install
+export NODE_ENV=production
 npm install
 npm run db:migrate
 kill -9 `ps -ax | grep instantboard-api | awk '{print $1}'`
